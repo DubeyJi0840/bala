@@ -1,0 +1,486 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="index, follow" />
+
+    
+
+<!--     <link
+      rel="shortcut icon"
+      href="assets/images/favicons.png"
+      type="image/png"
+    /> -->
+
+    <!-- Preloading fonts for better performance -->
+
+    <link
+      rel="preload"
+      href="assets/fonts/Mona-Sans.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+
+    <link rel="stylesheet" href="style.css"  />
+    <script src="script.js" defer></script>
+
+    <!-- Your name here -->
+    <title>Shweta Bala's Portfolio</title>
+
+    <script>
+        // Function to disable right-click
+        function disableRightClick(event) {
+            event.preventDefault(); // Prevent the default context menu from appearing
+            // alert("Right-click is disabled on this webpage."); // Optional: alert the user
+        }
+
+        // Function to disable certain keyboard shortcuts
+        function disableShortcuts(event) {
+            // Check for F12 (DevTools), Ctrl+U (View Source), Ctrl+Shift+I (DevTools)
+            if (event.key === "F12" || 
+                (event.ctrlKey && event.key === "u") || 
+                (event.ctrlKey && event.shiftKey && event.key === "i")) {
+                event.preventDefault(); // Prevent the default action
+                // alert("This action is disabled."); // Optional: alert the user
+            }
+        }
+
+        // Add event listeners when the DOM is fully loaded
+        document.addEventListener('DOMContentLoaded', (event) => {
+            document.addEventListener('contextmenu', disableRightClick);
+            document.addEventListener('keydown', disableShortcuts);
+        });
+    </script>
+    
+  </head>
+
+  <body>
+
+    <script>
+      const theme = localStorage.getItem("theme") || "dark";
+      document.body.classList.add(theme);
+    </script>
+
+    <header class="header">
+
+      <div class="menu-btn-container">
+        <div class="container">
+          <button type="button"  class="menu-btn">menu</button>
+        </div>
+      </div>
+
+      <nav class="nav hidden">
+        <ol class="nav-items">
+          <li class="nav-item"><a href="#">Home</a></li>
+          <li class="nav-item"><a href="#work">My Work</a></li>
+          <!-- <li class="nav-item"><a href="#blog">See Blog</a></li> -->
+          <li class="nav-item"><a href="#skills">My Skills</a></li>
+          <li class="nav-item">
+            <a href="#contact" data-focused="last-focused">Contact</a>
+          </li>
+          <li class="nav-item"><a href="assets\resume.pdf" target="_blank">Download CV</a></li>
+        </ol>
+      </nav>
+
+      <div class="container">
+         
+        <div class="header-textbox">
+           
+          <!-- Replace with your name and job title -->
+          <h1 class="h1">
+            Hi, I'm <span style="color: red;">Shweta Bala</span></h1>
+            <h2><span>Full-stack Developer</span>
+          </h2>
+
+          <!-- Add a small introductory paragraph about yourself -->
+          <p class="header-text">
+            “A full stack developer and software engineer who builds scalable, accessible, and performant web applications with seamless user experiences across frontend and backend.”
+          </p>
+
+          <!-- ...existing code... -->
+<div class="header-btns">
+  <!-- <a href="#contact" class="btn btn-cta">Hire me</a> -->
+  <a href="#work" class="btn btn-secondary">See my work</a>
+  <a href="assets/resume.pdf" class="btn btn-secondary" target="_blank" rel="noopener">Download CV</a>
+</div>
+<!-- ...existing code... -->
+
+        </div>
+         
+      </div>
+    </header>
+    
+
+    <main>
+    
+      <section class="work">
+        <div class="container">
+          <h2 class="h2" id="work">Selected Work</h2>
+          <div class="work-boxes">
+            <div class="work-box">
+              <div class="work-textbox">
+                <!-- Add your project title here -->
+                <h3 class="h3">E-learning Dance Accademy Platform</h3>
+                <!-- Add small description of your project  -->
+                <p class="work-text">
+                 A free, simple, and accessible platform to learn dance anytime, anywhere.
+                </p>
+                <!-- Add technologies you used to build the project -->
+                <ol class="work-technologies">
+                  <li>Html</li>
+                  <li>Css</li>
+                  <li>JavaScript</li>
+                  <li>PHP</li>
+                  <li>MySQL</li>
+
+                </ol>
+
+                <div class="work-links">
+                  <!-- Add url of project in href attribute -->
+                  <a href="https://github.com/sonamishu26/E-learning-Dance" target="_blank" rel="noopener" class="link"
+                    >Explore this project</a
+                  >
+
+                  <!-- Add link to project source code in href attribute if applicable otherwise feel free to delete or comment the markup -->
+                  <a
+                    href="https://github.com/sonamishu26/E-learning-Dance"
+                    target="_blank"
+                    rel="noopener"
+                    title="Source code"
+                  >
+                    <img
+                      src="assets/images/social-links/github.svg"
+                      alt="GitHub"
+                      loading="lazy"
+                    />
+                  </a>
+                </div>
+              </div>
+
+         <!-- Update img src and alt attribute  -->
+
+              <picture class="work-img">
+                <img
+                  loading="lazy"
+                  src="assets/images/work/1.jpg"
+                  alt="agency elevation"
+                />
+              </picture>
+            </div>
+
+
+            <!-- <div class="work-box">
+              <div class="work-textbox">
+                
+                <h3 class="h3">agencyelevation.com</h3>
+               
+
+                <p class="work-text">Website for Agency Elevation.</p>
+                <ol class="work-technologies">
+                  <li>React</li>
+                  <li>Gatsby</li>
+                  <li>Material UI</li>
+                </ol>
+                <div class="work-links">
+                
+                  <a href="#" target="_blank" rel="noopener" class="link"
+                    >Explore this project</a
+                  >
+
+                    
+                  <a
+                    href="http://github.com/devsyedmohsin"
+                    target="_blank"
+                    rel="noopener"
+                    title="Source code"
+                  >
+                    <img
+                      src="assets/images/social-links/github.svg"
+                      alt="GitHub"
+                      loading="lazy"
+                    />
+                  </a>
+                </div>
+              </div>
+         
+              <picture class="work-img">
+                <img
+                  loading="lazy"
+                  src="assets/images/work/agency-elevation.webp"
+                  alt="portfolio template"
+                />
+              </picture>
+            </div>
+
+            <div class="work-box">
+              <div class="work-textbox">
+                
+                <h3 class="h3">contribute.dev</h3>
+                
+                <p class="work-text">
+                  Website for DevX A dedicated space for developer experience
+                </p>
+                <ol class="work-technologies">
+                  <li>Ruby</li>
+                  <li>SvelteKit</li>
+                  <li>Emotion</li>
+                </ol>
+                <div class="work-links">
+                  
+                  <a href="#" target="_blank" rel="noopener" class="link"
+                    >Explore this project</a
+                  >
+
+                   
+                  <a
+                    href="#"
+                    target="_blank"
+                    rel="noopener"
+                    title="Source code"
+                  >
+                    <img
+                      src="assets/images/social-links/github.svg"
+                      alt="GitHub"
+                      loading="lazy"
+                    />
+                  </a>
+                </div>
+              </div>
+         
+              <picture class="work-img">
+                <img
+                  loading="lazy"
+                  src="assets/images/work/contribute-dev.webp"
+                  alt="contribute dev"
+                />
+              </picture>
+            </div> -->
+          </div>
+        </div>
+      </section>
+
+      
+
+      <!-- Update skills-img src, alt  and title attributes I have added some other logos in assets/images/skill for your convenience feel free to pick one if required  -->
+
+      <section class="skills">
+        <div class="container">
+          <h2 class="h2" id="skills">My Toolkit</h2>
+          <div class="skills-imgs">
+                <img src="assets/images/skills/react.webp" alt="React" class="skills-img" loading="lazy" title="React">
+                <img src="assets/images/skills/icons-18.png" alt="HTML" class="skills-img" loading="lazy" title="Svelte">
+                 <img src="assets/images/skills/java.png" alt="Java" class="skills-img" loading="lazy" title="Typescript">
+                 <img src="assets/images/skills/asp.png" alt="Accessibility" class="skills-img" loading="lazy" title="ASP.Net">
+                 <img src="assets/images/skills/download.png" alt="Shell" class="skills-img" loading="lazy" title="C#">
+                 <img src="assets/images/skills/node-js.webp" alt="NextJS" class="skills-img" loading="lazy" title="NextJS">
+                 <img src="assets/images/skills/sql.png" alt="SQL" class="skills-img" loading="lazy" title="Graph QL">
+                 <img src="assets/images/skills/git.webp" alt="Git" class="skills-img" loading="lazy" title="Git">
+                 <img src="assets/images/skills/html.webp" alt="CSS" class="skills-img" loading="lazy" title="CSS">
+                 <img src="assets/images/skills/js.webp" alt="JavaScript" class="skills-img" loading="lazy" title="JavaScript">
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <!-- Replace testimonials, author name, author job, img src and, alt attributes -->
+
+      <!-- <section>
+        <h2 class="h2">Testimonials</h2>
+        <div class="container">
+          <ol class="testimonials">
+            <li class="testimonial">
+              <blockquote class="testimonial-text">
+                Working with Syed was a great experience. His drive for clean aesthetics and his open communication style helped us collaborate closely on the solution.
+              </blockquote>
+              <figure class="testimonial-author">
+                <img
+                  src="assets/images/testimonials/rich-harris.png"
+                  alt="Rich Harris"
+                  loading="lazy"
+                />
+                <figcaption>
+                  <h3 class="testimonial-author-name">Harris Kareem</h3>
+                  <p class="testimonial-author-job">Developer @Outlets</p>
+                </figcaption>
+              </figure>
+            </li>
+            <li class="testimonial">
+              <blockquote class="testimonial-text">
+                Syed is a fantastic UI/UX designer and developer with a keen sense for marketing, and lead generation. He's the only designer I know who also has a deep understanding for code and front-end development.
+              </blockquote>
+              <figure class="testimonial-author">
+                <img
+                  src="assets/images/testimonials/frank-mcsherry.webp"
+                  alt="Andrew Mead"
+                  loading="lazy"
+                />
+                <figcaption>
+                  <h3 class="testimonial-author-name">
+                   Andrew Mead
+                  </h3>
+                  <p class="testimonial-author-job">Chief Scientist @Logos
+                  </p>
+                </figcaption>
+              </figure>
+            </li>
+            <li class="testimonial">
+              <blockquote class="testimonial-text">
+             
+                Talented artist, experienced with various
+                media and can make any project you are working on look good. He is
+                easy to work with and is a self starter. I would work with Syed
+                again.
+              </blockquote>
+              <figure class="testimonial-author">
+                <img
+                  src="assets/images/testimonials/brian-hirsh.png"
+                  alt="Brian Hirsh"
+                  loading="lazy"
+                />
+                <figcaption>
+                  <h3 class="testimonial-author-name">Brian Hirsh</h3>
+                  <p class="testimonial-author-job">Head @Zero-in</p>
+                </figcaption>
+              </figure>
+            </li>
+            <li class="testimonial">
+              <blockquote class="testimonial-text">
+                Syed is a true professional with amazing talent. He is a creative
+                thinker, has his finger on the pulse of whats to come, and
+                absolutely one of the quickest and best problem solvers I have
+                ever met.
+              </blockquote>
+              <figure class="testimonial-author">
+                <img
+                  src="assets/images/testimonials/adam.png"
+                  alt="Adam Argalye"
+                  loading="lazy"
+                />
+                <figcaption>
+                  <h3 class="testimonial-author-name">Adam Argalye</h3>
+                  <p class="testimonial-author-job">SWE @Google</p>
+                </figcaption>
+              </figure>
+            </li>
+            <li class="testimonial">
+              <blockquote class="testimonial-text">
+               Syed is one of my favourite people to work with. He's my go-to colleague when trouble shooting any new technique or technology because she understands how to tackle unknown problems with gumption. 
+              </blockquote>
+              <figure class="testimonial-author">
+                <img
+                  src="assets/images/testimonials/val-head.png"
+                  alt="Val Head"
+                  loading="lazy"
+                />
+                <figcaption>
+                  <h3 class="testimonial-author-name">Val Head</h3>
+                  <p class="testimonial-author-job">CEO @Engines</p>
+                </figcaption>
+              </figure>
+            </li>
+            <li class="testimonial">
+              <blockquote class="testimonial-text">
+                Syed is a talented artist. He is very experienced with various
+                media and can make any project you are working on look good. He is
+                easy to work with and is a self starter. I would work with Syed
+                again.
+              </blockquote>
+              <figure class="testimonial-author">
+                <img
+                  src="assets/images/testimonials/tim-satterwhite.webp"
+                  alt="Gary Simon"
+                  loading="lazy"
+                />
+                <figcaption>
+                  <h3 class="testimonial-author-name">Gary Simon</h3>
+                  <p class="testimonial-author-job">A11y Advocate @W3C</p>
+                </figcaption>
+              </figure>
+            </li>
+          </ol>
+        </div>
+      </section> -->
+
+      <section class="contact">
+        <div class="container">
+          <h2 class="h2" id="contact">Contact With Me</h2>
+          <div class="contact-content">
+            <section class="contact-textbox">
+              <!-- Please comment this component if you're not available for hire -->
+              <strong href="assets/resume.pdf" class="hire-alert">
+                <span class="indicator"></span>
+                Available for hire
+              </strong>
+              <p class="contact-text">
+                As a software engineer, I construct web interfaces and design
+                systems with a special love for accessibility and the
+                performance. I tend to code things from scratch and enjoy
+                bringing ideas to life.
+              </p>
+              <p class="contact-text">
+                I'm also an open-source developer, and I love contributing to
+                projects that make a difference. If you have a project in mind or
+                just want to say hi, feel free to drop a message!
+              </p>
+              <!-- Replace src with your signatures and name -->
+               <a title="Email" href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox?compose=SxfkdtCxHPWpKGSFtXGTnSTxzlDFSPZWfgWTjjtRZHsJBXnLzvsPXxhXCDKrQDrNLRrrFjxrgDVMdNnQjBXhnmBtmfcpcHMtZGkFnhJgbvWPnZmfdhg" class="btn btn-secondary" target="_blank" rel="noopener">Drop a message</a>
+            </section>
+            
+          
+            <img
+              src="assets/images/me.png"
+              alt="Shweta Bala"
+              class="contact-img"
+              loading="lazy"
+
+            />
+            </div>
+        
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <!-- Update href and src attributes -->
+          <nav>
+            <ol class="footer-links">
+              <li class="footer-link">
+                <a title="GitHub" href="https://github.com/sonamishu26" target="_blank" rel="noopener"
+                  ><img
+                    loading="lazy"
+                    src="assets/images/social-links/github.svg"
+                    alt="GitHub"
+                /></a>
+              </li>
+              
+              <li class="footer-link">
+                <a title="Linkedin" href="https://www.linkedin.com/in/shweta-bala-302195225/" target="_blank" rel="noopener"
+                  ><img
+                    loading="lazy"
+                    src="assets/images/social-links/linkedin.svg"
+                    alt="Linkedin"
+                /></a>
+              </li>
+              <li class="footer-link">
+        <a title="Email" href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox?compose=SxfkdtCxHPWpKGSFtXGTnSTxzlDFSPZWfgWTjjtRZHsJBXnLzvsPXxhXCDKrQDrNLRrrFjxrgDVMdNnQjBXhnmBtmfcpcHMtZGkFnhJgbvWPnZmfdhg">
+          
+          <img loading="lazy" src="assets/images/social-links/email.svg" alt="Email">
+          
+        </a>
+      </li>
+            </ol>
+          </nav>
+          <p class="footer-text">
+            &copy; <span>2025</span> - All rights reserved by <a target="_blank" rel="noopener" href="https://www.linkedin.com/in/shweta-bala-302195225/">Shweta Bala</a>
+          </p>
+          
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
